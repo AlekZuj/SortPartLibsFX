@@ -1,0 +1,55 @@
+15:49:13 / 02.06.2019 AlekZBook AV    1967
+15:51:12 / 02.06.2019 AlekZBook BL    2152ms
+16:05:30 / 02.06.2019 AlekZBook AV    1986ms
+16:06:45 / 02.06.2019 AlekZBook a    2039ms
+20:19:22 / 03.06.2019 AlekZBook AV    2153ms
+18:45:05 / 04.06.2019 V0.5 AlekZBook AV    3079ms
+18:50:51 / 04.06.2019 V0.5 AlekZBook AV    2143ms
+18:53:18 / 04.06.2019 V0.5 AlekZBook AV    2210ms
+18:53:55 / 04.06.2019 V0.5 AlekZBook AV    2155ms
+19:08:52 / 04.06.2019 V0.5 AlekZBook AV    2032ms
+19:10:26 / 04.06.2019 V0.5 AlekZBook AV    2018ms
+19:13:57 / 04.06.2019 V0.5 AlekZBook AV    2200ms
+19:15:52 / 04.06.2019 V0.5 AlekZBook AV    2053ms
+19:28:01 / 04.06.2019 V0.5 AlekZBook AV    2006ms
+19:37:07 / 04.06.2019 V0.5 AlekZBook AV    2281ms
+19:45:30 / 04.06.2019 V0.5 AlekZBook AV    2108ms
+19:46:50 / 04.06.2019 V0.5 AlekZBook AV    2104ms
+19:48:49 / 04.06.2019 V0.5 AlekZBook AV    2587ms
+19:51:59 / 04.06.2019 V0.5 AlekZBook AV    2049ms
+19:55:26 / 04.06.2019 V0.5 AlekZBook AV    2025ms
+19:57:57 / 04.06.2019 V0.5 AlekZBook AV    2409ms
+20:01:08 / 04.06.2019 V0.5 AlekZBook AV    2066ms
+20:32:07 / 04.06.2019 V0.5 AlekZBook AV    2151ms
+20:45:23 / 04.06.2019 V0.5 AlekZBook AV    2106ms
+20:46:24 / 04.06.2019 V0.5 AlekZBook AV java.io.IOException   1014ms
+20:47:37 / 04.06.2019 V0.5 AlekZBook AV    2099ms
+20:49:12 / 04.06.2019 V0.5 AlekZBook AV    1986ms
+12:52:32 / 09.06.2019 V0.5 AlekZBook AV   java.io.FileNotFoundException: e:\first\Перечень деталей AV.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом) 2298ms
+12:53:04 / 09.06.2019 V0.5 AlekZBook AV    1958ms
+13:07:51 / 09.06.2019 V0.6 AlekZBook AVAV    2197ms
+13:14:51 / 09.06.2019 V0.6 AlekZBook AVAV    2231ms
+13:18:33 / 09.06.2019 V0.6 AlekZBook AVAV    2185ms
+13:24:43 / 09.06.2019 V0.6 AlekZBook AVAV    2346ms
+21:45:03 / 10.06.2019 V1.0 AlekZBook BLBL java.io.IOException   14598ms
+21:48:11 / 10.06.2019 V1.0 AlekZBook BLBL Read: java.io.IOException   2934ms
+22:07:31 / 10.06.2019 V1.0 AlekZBook qqqq Read: java.io.IOException   4301ms
+22:08:14 / 10.06.2019 V1.0 AlekZBook qqqq Read: java.io.IOException   4192ms
+22:09:49 / 10.06.2019 V1.0 AlekZBook qqqqq Read: java.io.IOException   6445ms
+22:11:47 / 10.06.2019 V1.0 AlekZBook 111 Read: java.io.IOException   3446ms
+22:13:52 / 10.06.2019 V1.0 AlekZBook 111 Read: java.io.IOException   3001ms
+22:15:57 / 10.06.2019 V1.0 AlekZBook 111 Read: java.io.IOException   2513ms
+22:17:07 / 10.06.2019 V1.0 AlekZBook 111 Read: java.io.IOException   3813ms
+22:19:55 / 10.06.2019 V1.0 AlekZBook 111 Read: java.io.IOException   3073ms
+22:21:01 / 10.06.2019 V1.0 AlekZBook 111 Read: java.io.IOException   2882ms
+22:22:48 / 10.06.2019 V1.0 AlekZBook 111 Read: java.io.IOException   2987ms
+22:23:50 / 10.06.2019 V1.0 AlekZBook 111    1619ms
+22:59:29 / 10.06.2019 V1.0 AlekZBook AV Read: java.io.IOException   5011ms
+23:02:26 / 10.06.2019 V1.0 AlekZBook 11111 Read: java.io.IOException   3297ms
+23:03:37 / 10.06.2019 V1.0 AlekZBook q Read: java.io.IOException   2979ms
+23:05:04 / 10.06.2019 V1.0 AlekZBook q    2117ms
+23:05:50 / 10.06.2019 V1.0 AlekZBook q    428ms
+23:05:59 / 10.06.2019 V1.0 AlekZBook q    328ms
+23:06:03 / 10.06.2019 V1.0 AlekZBook q    292ms
+23:07:50 / 10.06.2019 V1.0 AlekZBook q    1731ms
+00:52:28 / 11.06.2019 V1.0 AlekZBook q    2071ms
