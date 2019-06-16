@@ -1,5 +1,4 @@
 
-
 import java.io.File;
 
 import javafx.geometry.Insets;
@@ -21,7 +20,7 @@ public class ErrContoller {
 	public static String errWindowProjectName() {
 		Stage window = new Stage();
 		window.initModality(Modality.APPLICATION_MODAL);
-		VBox box = new VBox();
+		VBox box = new VBox(10);
 		box.setSpacing(10);
 		Label text = new Label("¬ведите им€ проекта.");
 		text.setAlignment(Pos.TOP_CENTER);
@@ -51,7 +50,7 @@ public class ErrContoller {
 	public static String errWindowFilePath() {
 		Stage window = new Stage();
 		window.initModality(Modality.APPLICATION_MODAL);
-		VBox box = new VBox();
+		VBox box = new VBox(10);
 		box.setSpacing(10);
 		Label text = new Label("¬ведите путь к файлу.");
 		text.setAlignment(Pos.TOP_CENTER);
@@ -96,7 +95,7 @@ public class ErrContoller {
 	public static void errWindow(String str) {
 		Stage window = new Stage();
 		window.initModality(Modality.APPLICATION_MODAL);
-		VBox box = new VBox();
+		VBox box = new VBox(10);
 		Label text = new Label(str);
 		text.setAlignment(Pos.CENTER);
 		text.setPadding(new Insets(20));
@@ -114,4 +113,5 @@ public class ErrContoller {
 		window.showAndWait();
 	}
 
+	 
 }

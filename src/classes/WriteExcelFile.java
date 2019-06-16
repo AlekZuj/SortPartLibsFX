@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
@@ -20,6 +21,8 @@ import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.sun.javafx.collections.SetAdapterChange;
 
 public class WriteExcelFile {
 	protected static final int NUMBER_COLUMN = 0;
@@ -144,6 +147,7 @@ public class WriteExcelFile {
 		cellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 		Font font = wb.createFont();
 		font.setFontHeightInPoints((short) fontSize);
+		font.setFontName("Times New Roman");
 		font.setBold(fontBold);
 		cellStyle.setFont(font);
 		cellStyle.setWrapText(wrapped);
@@ -191,6 +195,7 @@ public class WriteExcelFile {
 		Font font = wb.createFont();
 		font.setBold(true);
 		font.setFontHeightInPoints((short) 14);
+		font.setFontName("Times New Roman");
 		cellRed.setFont(font);
 		cellRed.setAlignment(HorizontalAlignment.CENTER);
 		Cell cellOne = rowOne.createCell(DESIGNATION_COLUMN);

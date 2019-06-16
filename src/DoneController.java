@@ -15,7 +15,7 @@ public class DoneController {
 	public static void doneWindow() {
 		Stage window = new Stage();
 		window.initModality(Modality.APPLICATION_MODAL);
-		VBox box = new VBox();
+		VBox box = new VBox(10);
 		Label text = new Label("Готово!");
 		text.setAlignment(Pos.CENTER);
 		text.setPadding(new Insets(20));

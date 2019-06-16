@@ -124,6 +124,11 @@ public class SortPartList {
 			if (partList.get(i).getMaterialTable().toLowerCase().contains("не указан")) {
 				partList.get(i).setMaterialTable("");
 			}
+			if (partList.get(i).getName().toLowerCase().contains("pp1381")) {
+				partList.get(i).setMaterial("");
+				partList.get(i).setMaterialFB("");
+				partList.get(i).setMaterialTable("");
+			}
 		}
 	}
 
@@ -198,7 +203,7 @@ public class SortPartList {
 
 	public static void makeDesignationBetter(List<Part> partList) {
 		for (int i = 0; i < partList.size(); i++) {
-			if (partList.get(i).getDesignation()!=null && partList.get(i).getDesignation().contains("/")) {
+			if (partList.get(i).getDesignation() != null && partList.get(i).getDesignation().contains("/")) {
 				String[] strArr = partList.get(i).getDesignation().split("/");
 				StringBuilder sb = new StringBuilder();
 				for (int j = 0; j < strArr.length; j++) {

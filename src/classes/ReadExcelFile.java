@@ -52,7 +52,7 @@ public class ReadExcelFile {
 		File file = new File(filePath);
 		List<Part> partList = new ArrayList<Part>();
 		int lines = 0;
-		if (file.isFile() && !file.isDirectory()) {
+		if (file.exists()) {
 			try (Workbook wb = new XSSFWorkbook(new FileInputStream(file))) {
 				lines = wb.getSheetAt(0).getLastRowNum();
 				for (int i = 1; i <= lines; i++) {
@@ -209,7 +209,6 @@ public class ReadExcelFile {
 				throw e;
 			}
 		} else {
-			System.out.println("1");
 			throw new IOException();
 		}
 
@@ -239,7 +238,15 @@ public class ReadExcelFile {
 
 	protected String dateToString(Date date) {
 		SimpleDateFormat df = new SimpleDateFormat("MM-yyyy");
-		String str = "_" + df.format(date);
+		SimpleDateFormat dfMonth = new SimpleDateFormat("MM");
+		SimpleDateFormat dfDay = new SimpleDateFormat("dd");
+		SimpleDateFormat dfYear = new SimpleDateFormat("yyyy");
+		String str = "_";
+		if (!dfYear.format(date).equals("2019")) {
+		str += df.format(date);
+		} else {
+			str +=dfMonth.format(date)+"-"+dfDay.format(date);
+		}
 		return str;
 	}
 }
