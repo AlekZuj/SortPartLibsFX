@@ -9,7 +9,6 @@ import java.util.List;
 
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
@@ -22,8 +21,6 @@ import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.sun.javafx.collections.SetAdapterChange;
-
 public class WriteExcelFile {
 	protected static final int NUMBER_COLUMN = 0;
 	protected static final int DESIGNATION_COLUMN = 1;
@@ -31,6 +28,8 @@ public class WriteExcelFile {
 	protected static final int MATERIAL_COLUMN = 3;
 	protected static final int THICKNESS_COLUMN = 4;
 	protected static final int QUANTITY_COLUMN = 5;
+	protected static final int MAIN_TEXT_SIZE=14;
+	protected static final int HEAD_TEXT_SIZE=20;
 
 	private String projectName;
 
@@ -63,19 +62,24 @@ public class WriteExcelFile {
 			Cell cellMat = row.createCell(MATERIAL_COLUMN);
 			Cell cellThick = row.createCell(THICKNESS_COLUMN);
 			Cell cellQua = row.createCell(QUANTITY_COLUMN);
-			makeRowStyle(wb, row, Color.WHITE, false, 14, true);
+			makeRowStyle(wb, row, Color.WHITE, false, MAIN_TEXT_SIZE, true);
 			cellNum.setCellValue(i + 1);
-			cellDes.setCellValue(partList.get(i).getDesignation());
+			if (!partList.get(i).getDesignation().toLowerCase().contains("sldprt")) {
+				cellDes.setCellValue(partList.get(i).getDesignation());
+			} else {
+				cellDes.setCellValue(partList.get(i).getDesignation()+ " FILE NAME = " + partList.get(i).getSwFileName());
+				makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
+			}
 			if (partList.get(i).getDesignation() == null || partList.get(i).getDesignation().isEmpty()) {
-				makeRowStyle(wb, row, Color.RED, false, 14, true);
+				makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 			cellName.setCellValue(partList.get(i).getName());
 			if (partList.get(i).getName().isEmpty()) {
-				makeRowStyle(wb, row, Color.RED, false, 14, true);
+				makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 			cellMat.setCellValue(partList.get(i).getMaterial());
 			if (partList.get(i).getMaterial().isEmpty()) {
-				makeRowStyle(wb, row, Color.RED, false, 14, true);
+				makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 			if (partList.get(i).getThickness() < 0) {
 				cellThick.setCellValue("");
@@ -85,11 +89,11 @@ public class WriteExcelFile {
 			if (partList.get(i).getThickness() < 0 && (partList.get(i).getMaterial().toLowerCase().contains("лист")
 					|| (partList.get(i).getMaterial().toLowerCase().contains("рулон")
 							&& !partList.get(i).getMaterial().toLowerCase().contains("az")))) {
-				makeRowStyle(wb, row, Color.RED, false, 14, true);
+				makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 			cellQua.setCellValue(partList.get(i).getQuantity());
 			if (partList.get(i).getQuantity() <= 0) {
-				makeRowStyle(wb, row, Color.RED, false, 14, true);
+				makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 		}
 		autoSizeColumns(wb);
@@ -136,12 +140,13 @@ public class WriteExcelFile {
 		cellTitleThick.setCellValue("Толщина листового металла");
 		Cell cellTitleQau = rowTitleTwo.createCell(QUANTITY_COLUMN);
 		cellTitleQau.setCellValue("Кол-во");
-		makeRowStyle(wb, rowTitle, Color.WHITE, true, 20, false);
-		makeRowStyle(wb, rowTitleTwo, Color.LIGHT_GRAY, true, 14, false);
+		makeRowStyle(wb, rowTitle, Color.WHITE, true, HEAD_TEXT_SIZE, false);
+		makeRowStyle(wb, rowTitleTwo, Color.LIGHT_GRAY, true, MAIN_TEXT_SIZE, false);
 		return wb;
 	}
 
-	public static void makeRowStyle(Workbook wb, Row row, Color color, boolean fontBold, int fontSize, boolean wrapped) {
+	public static void makeRowStyle(Workbook wb, Row row, Color color, boolean fontBold, int fontSize,
+			boolean wrapped) {
 		XSSFCellStyle cellStyle = (XSSFCellStyle) wb.createCellStyle();
 		cellStyle.setFillForegroundColor(new XSSFColor(color));
 		cellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
@@ -181,7 +186,7 @@ public class WriteExcelFile {
 				if (j == NAME_COLUMN) {
 					cell.setCellValue(assemList.get(i));
 				}
-				makeRowStyle(wb, row, Color.YELLOW, true, 14, true);
+				makeRowStyle(wb, row, Color.YELLOW, true, MAIN_TEXT_SIZE, true);
 			}
 		}
 	}
@@ -194,7 +199,7 @@ public class WriteExcelFile {
 		cellRed.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 		Font font = wb.createFont();
 		font.setBold(true);
-		font.setFontHeightInPoints((short) 14);
+		font.setFontHeightInPoints((short) MAIN_TEXT_SIZE);
 		font.setFontName("Times New Roman");
 		cellRed.setFont(font);
 		cellRed.setAlignment(HorizontalAlignment.CENTER);

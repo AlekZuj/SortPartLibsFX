@@ -54,3 +54,5 @@
 23:07:50 / 10.06.2019 V1.0 AlekZBook q    1731ms
 16:50:40 / 15.06.2019 V1.0 AlekZBook ds    1878ms
 16:50:47 / 15.06.2019 V1.0 AlekZBook ds    455ms
+22:26:50 / 17.06.2019 V1.0 AlekZBook 1a    8655ms
+22:53:52 / 18.06.2019 V1.0 AlekZBook τττ    3713ms

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class SortPartList {
 
-	public static void removeStdParts(List<Part> partList) throws IOException {
+	public static void removeStdParts(List<Part> partList) throws IOException, NullPointerException {
 		setSectionPart(partList);
 		List<String> stdList = addLib("StdLib");
 		for (int i = 0; i < partList.size(); i++) {

@@ -3,6 +3,8 @@
 //v 0.5 - introduced design and reminder elements. Testing started.
 //v 0.6 - changed methods of making cell styles. NULL check added in delete enter method.
 //v 1.0 - transition to a graphical interface. Testing started.
+//v 1.1 - added NullPointerExsception in catch. New DoneController.
+//v 1.2 - no-break space (char 160) problem in hight/width/length debugged. WriteExselFile(ral) if designation contains SLDPRT write swFile name. Text size in constant. )
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -19,6 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.stage.Stage;
@@ -39,7 +42,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
 public class Main extends Application {
-	private static final String VERSION = "1.0";
+	private static final String VERSION = "1.2";
 	private static final int FONT_SIZE = 14;
 
 	@Override
@@ -49,7 +52,7 @@ public class Main extends Application {
 		VBox mainBox = new VBox(10);
 		mainBox.setPadding(new Insets(10));
 		mainBox.setAlignment(Pos.CENTER);
-		File imageFile = new File("E:\\JAVA\\SortPartsList\\SortPartsListFX\\logo_vents_min.png");
+		File imageFile = new File("logo_vents_min.png");
 		String imageLocalUrl = imageFile.toURI().toURL().toString();
 		ImageView logo = new ImageView(imageLocalUrl);
 		HBox rowOne = new HBox(20);
@@ -112,7 +115,12 @@ public class Main extends Application {
 		mainBox.getChildren().addAll(logo, rowOne, rowTwo, btnRow);
 		Scene scene = new Scene(mainBox);
 		primaryStage.setScene(scene);
+		primaryStage.setOnCloseRequest(event -> {
+			Platform.exit();
+			System.exit(0);
+		});
 		primaryStage.show();
+		
 
 	}
 
@@ -161,14 +169,14 @@ public class Main extends Application {
 			while ((line = br.readLine()) != null) {
 				log.add(line);
 			}
-		} catch (IOException e) {
+		} catch (Exception e) {
 			throw e;
 		}
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss / dd.MM.yyyy");
 		try {
 			log.add(sdf.format(new Date()) + " V" + version + " " + InetAddress.getLocalHost().getHostName() + " "
 					+ projectName + " " + strRead + " " + strSort + " " + strWrite + " " + time + "ms");
-		} catch (UnknownHostException e) {
+		} catch (Exception e) {
 			throw e;
 		}
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(logFile))) {
@@ -190,7 +198,7 @@ public class Main extends Application {
 		String strWrite = "";
 		try {
 			list = ref.readXLSX(inputFilePath);
-		} catch (NumberFormatException | IOException e) {
+		} catch (Exception e) {
 			ErrContoller.errWindow(strRead = "Read: " + e.toString());
 		}
 		try {
@@ -200,7 +208,7 @@ public class Main extends Application {
 			classes.SortPartList.fillMaterial(list);
 			classes.SortPartList.delThickness(list);
 			classes.SortPartList.makeDesignationBetter(list);
-		} catch (IOException e1) {
+		} catch (Exception e1) {
 			ErrContoller.errWindow(strSort = "Sort: " + e1.toString());
 		}
 
@@ -217,7 +225,7 @@ public class Main extends Application {
 					try {
 						wef.saveXLSX(filePathMakerRal(outputFilePath), list);
 						DoneController.doneWindow();
-					} catch (IOException e) {
+					} catch (Exception e) {
 						ErrContoller.errWindow(strWrite = "Write: " + e.toString());
 					}
 				}
@@ -226,7 +234,7 @@ public class Main extends Application {
 				try {
 					wef.saveXLSX(filePathMakerRal(outputFilePath), list);
 					DoneController.doneWindow();
-				} catch (IOException e) {
+				} catch (Exception e) {
 					ErrContoller.errWindow(strWrite = "Write: " + e.toString());
 				}
 			}
@@ -244,7 +252,7 @@ public class Main extends Application {
 					try {
 						wef.saveXLSX(outputFilePath, list);
 						DoneController.doneWindow();
-					} catch (IOException e) {
+					} catch (Exception e) {
 						ErrContoller.errWindow(strWrite = "Write: " + e.toString());
 					}
 				}
@@ -253,7 +261,7 @@ public class Main extends Application {
 				try {
 					wef.saveXLSX(outputFilePath, list);
 					DoneController.doneWindow();
-				} catch (IOException e) {
+				} catch (Exception e) {
 					ErrContoller.errWindow(strWrite = "Write: " + e.toString());
 				}
 			}
@@ -262,7 +270,7 @@ public class Main extends Application {
 		long tend = System.currentTimeMillis();
 		try {
 			logFileWriter(projectName, strRead, strSort, strWrite, (tend - tstart), Main.getVegsion());
-		} catch (IOException e) {
+		} catch (Exception e) {
 			ErrContoller.errWindow(strWrite = "Write log: " + e.toString());
 
 		}

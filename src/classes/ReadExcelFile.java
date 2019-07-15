@@ -48,7 +48,8 @@ public class ReadExcelFile {
 		this.filePath = filePath;
 	}
 
-	public List<Part> readXLSX(String filePath) throws IOException, NumberFormatException {
+	public List<Part> readXLSX(String filePath)
+			throws IOException, NumberFormatException, NullPointerException, ParseException {
 		File file = new File(filePath);
 		List<Part> partList = new ArrayList<Part>();
 		int lines = 0;
@@ -135,8 +136,8 @@ public class ReadExcelFile {
 						part.setWidth(wb.getSheetAt(0).getRow(i).getCell(WIDTH_COLUMN).getNumericCellValue());
 						break;
 					case STRING:
-						part.setWidth(Double
-								.parseDouble(wb.getSheetAt(0).getRow(i).getCell(WIDTH_COLUMN).getStringCellValue()));
+						String str = wb.getSheetAt(0).getRow(i).getCell(WIDTH_COLUMN).getStringCellValue();
+						part.setWidth(Double.parseDouble(str.trim().replaceAll(String.valueOf((char) 160), "")));
 						break;
 					default:
 						part.setWidth(-1);
@@ -148,8 +149,8 @@ public class ReadExcelFile {
 						part.setHeight(wb.getSheetAt(0).getRow(i).getCell(HIGHT_COLUMN).getNumericCellValue());
 						break;
 					case STRING:
-						part.setHeight(Double
-								.parseDouble(wb.getSheetAt(0).getRow(i).getCell(HIGHT_COLUMN).getStringCellValue()));
+						String str = wb.getSheetAt(0).getRow(i).getCell(HIGHT_COLUMN).getStringCellValue();
+						part.setHeight(Double.parseDouble(str.trim().replaceAll(String.valueOf((char) 160), "")));
 						break;
 					default:
 						part.setHeight(-1);
@@ -161,8 +162,8 @@ public class ReadExcelFile {
 						part.setLength(wb.getSheetAt(0).getRow(i).getCell(LENGTH_COLUMN).getNumericCellValue());
 						break;
 					case STRING:
-						part.setLength(Double
-								.parseDouble(wb.getSheetAt(0).getRow(i).getCell(LENGTH_COLUMN).getStringCellValue()));
+						String str = wb.getSheetAt(0).getRow(i).getCell(LENGTH_COLUMN).getStringCellValue();
+						part.setLength(Double.parseDouble(str.trim().replaceAll(String.valueOf((char) 160), "")));
 						break;
 					default:
 						part.setLength(-1);
@@ -205,7 +206,7 @@ public class ReadExcelFile {
 					}
 					partList.add(part);
 				}
-			} catch (IOException | NumberFormatException e) {
+			} catch (Exception e) {
 				throw e;
 			}
 		} else {
@@ -243,9 +244,9 @@ public class ReadExcelFile {
 		SimpleDateFormat dfYear = new SimpleDateFormat("yyyy");
 		String str = "_";
 		if (!dfYear.format(date).equals("2019")) {
-		str += df.format(date);
+			str += df.format(date);
 		} else {
-			str +=dfMonth.format(date)+"-"+dfDay.format(date);
+			str += dfMonth.format(date) + "-" + dfDay.format(date);
 		}
 		return str;
 	}

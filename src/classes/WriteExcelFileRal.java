@@ -24,6 +24,8 @@ public class WriteExcelFileRal {
 	protected static final int COATING_SQUARE_COLUMN = 6;
 	protected static final int WIDTH_HIGHT_LENGTH_COLUMN = 7;
 	protected static final int QUANTITY_COLUMN = 8;
+	protected static final int MAIN_TEXT_SIZE=14;
+	protected static final int HEAD_TEXT_SIZE=20;
 
 	private String projectName;
 
@@ -59,19 +61,21 @@ public class WriteExcelFileRal {
 			Cell cellCoatingSquare = row.createCell(COATING_SQUARE_COLUMN);
 			Cell cellSize = row.createCell(WIDTH_HIGHT_LENGTH_COLUMN);
 			Cell cellQua = row.createCell(QUANTITY_COLUMN);
-			WriteExcelFile.makeRowStyle(wb, row, Color.WHITE, false, 14, true);
+			WriteExcelFile.makeRowStyle(wb, row, Color.WHITE, false, MAIN_TEXT_SIZE, true);
 			cellNum.setCellValue(i + 1);
-			cellDes.setCellValue(partList.get(i).getDesignation());
-			if (partList.get(i).getDesignation() == null || partList.get(i).getDesignation().isEmpty()) {
-				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, 14, true);
+			if (!partList.get(i).getDesignation().toLowerCase().contains("sldprt")) {
+				cellDes.setCellValue(partList.get(i).getDesignation());
+			} else {
+				cellDes.setCellValue(partList.get(i).getDesignation()+ " FILE NAME = " + partList.get(i).getSwFileName());
+				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 			cellName.setCellValue(partList.get(i).getName());
 			if (partList.get(i).getName().isEmpty()) {
-				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, 14, true);
+				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 			cellMat.setCellValue(partList.get(i).getMaterial());
 			if (partList.get(i).getMaterial().isEmpty()) {
-				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, 14, true);
+				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 			if (partList.get(i).getThickness() < 0) {
 				cellThick.setCellValue("");
@@ -81,7 +85,7 @@ public class WriteExcelFileRal {
 			if (partList.get(i).getThickness() < 0 && (partList.get(i).getMaterial().toLowerCase().contains("лист")
 					|| (partList.get(i).getMaterial().toLowerCase().contains("рулон")
 							&& !partList.get(i).getMaterial().toLowerCase().contains("az")))) {
-				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, 14, true);
+				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 			if (!partList.get(i).getRal().isEmpty()) {
 				cellRal.setCellValue(partList.get(i).getRal() + " / " + partList.get(i).getCoatingType());
@@ -95,7 +99,7 @@ public class WriteExcelFileRal {
 			}
 			cellQua.setCellValue(partList.get(i).getQuantity());
 			if (partList.get(i).getQuantity() <= 0) {
-				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, 14, true);
+				WriteExcelFile.makeRowStyle(wb, row, Color.RED, false, MAIN_TEXT_SIZE, true);
 			}
 		}
 		WriteExcelFile.autoSizeColumns(wb);
@@ -132,8 +136,8 @@ public class WriteExcelFileRal {
 		cellTitleSize.setCellValue("–азмеры ƒхЎх¬");
 		Cell cellTitleQau = rowTitleTwo.createCell(QUANTITY_COLUMN);
 		cellTitleQau.setCellValue(" ол-во");
-		WriteExcelFile.makeRowStyle(wb, rowTitle, Color.WHITE, true, 20, false);
-		WriteExcelFile.makeRowStyle(wb, rowTitleTwo, Color.LIGHT_GRAY, true, 14, false);
+		WriteExcelFile.makeRowStyle(wb, rowTitle, Color.WHITE, true, HEAD_TEXT_SIZE, false);
+		WriteExcelFile.makeRowStyle(wb, rowTitleTwo, Color.LIGHT_GRAY, true, MAIN_TEXT_SIZE, false);
 		return wb;
 	}
 }

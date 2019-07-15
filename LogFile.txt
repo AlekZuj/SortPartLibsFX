@@ -67,3 +67,33 @@
 11:31:53 / 16.06.2019 V1.0 AlekZBook a    3334ms
 11:31:58 / 16.06.2019 V1.0 AlekZBook a    3069ms
 11:32:37 / 16.06.2019 V1.0 AlekZBook a    6072ms
+18:23:31 / 17.06.2019 V1.0 AlekZBook 1111    10567ms
+18:24:12 / 17.06.2019 V1.0 AlekZBook 11111    1784ms
+18:58:59 / 17.06.2019 V1.0 AlekZBook 1    3433ms
+21:55:00 / 17.06.2019 V1.0 AlekZBook 1a Read: java.lang.NullPointerException   9134ms
+21:55:18 / 17.06.2019 V1.0 AlekZBook 1a    4000ms
+22:08:03 / 17.06.2019 V1.0 AlekZBook 1a Read: java.lang.NullPointerException   7151ms
+19:46:11 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   8463ms
+19:50:07 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   7166ms
+19:53:14 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   174380ms
+19:57:05 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   21158ms
+20:01:24 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   10305ms
+20:02:32 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   4895ms
+20:03:54 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   7751ms
+20:05:52 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   9829ms
+20:06:41 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   5840ms
+20:08:52 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   10383ms
+20:09:56 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   21694ms
+20:14:47 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   12967ms
+20:16:48 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   5672ms
+20:19:22 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   8863ms
+20:20:18 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   18191ms
+20:20:50 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   10110ms
+20:23:00 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 330"   6063ms
+20:26:50 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: empty String   11000ms
+20:30:45 / 15.07.2019 V1.0 AlekZBook 1 Read: java.lang.NumberFormatException: For input string: "1 320"   8792ms
+20:37:29 / 15.07.2019 V1.0 AlekZBook 1    4903ms
+20:56:14 / 15.07.2019 V1.0 AlekZBook 1    4823ms
+20:58:58 / 15.07.2019 V1.0 AlekZBook 1    4879ms
+21:12:59 / 15.07.2019 V1.2 AlekZBook 1    4478ms
+21:13:02 / 15.07.2019 V1.2 AlekZBook 1    1983ms
