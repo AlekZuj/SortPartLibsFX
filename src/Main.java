@@ -4,7 +4,7 @@
 //v 0.6 - changed methods of making cell styles. NULL check added in delete enter method.
 //v 1.0 - transition to a graphical interface. Testing started.
 //v 1.1 - added NullPointerExsception in catch. New DoneController.
-//v 1.2 - no-break space (char 160) problem in hight/width/length debugged. WriteExselFile(ral) if designation contains SLDPRT write swFile name. Text size in constant. )
+//v 1.2 - no-break space (char 160) problem in hight/width/length debugged. WriteExselFile(ral) if designation contains SLDPRT write swFile name. Text size in constant. Add ico.
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -36,6 +36,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -49,6 +50,10 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("SPLFX v" + VERSION + " by AlekZ");
 		primaryStage.setResizable(false);
+		File icoFile = new File("vents_ico.png");
+		String icoLocalUrl=icoFile.toURI().toURL().toString();
+		Image ico = new Image(icoLocalUrl);
+		primaryStage.getIcons().add(ico);
 		VBox mainBox = new VBox(10);
 		mainBox.setPadding(new Insets(10));
 		mainBox.setAlignment(Pos.CENTER);
@@ -120,7 +125,6 @@ public class Main extends Application {
 			System.exit(0);
 		});
 		primaryStage.show();
-		
 
 	}
 
