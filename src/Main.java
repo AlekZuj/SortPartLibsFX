@@ -5,13 +5,11 @@
 //v 1.0 - transition to a graphical interface. Testing started.
 //v 1.1 - added NullPointerExsception in catch. New DoneController.
 //v 1.2 - no-break space (char 160) problem in hight/width/length debugged. WriteExselFile(ral) if designation contains SLDPRT write swFile name. Text size in constant. Add ico.
+//v 1.3 - get Lib Files through the LAN. Del 0 from dates in designation. write logFile without reading.
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
@@ -43,7 +41,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
 public class Main extends Application {
-	private static final String VERSION = "1.2";
+	private static final String VERSION = "1.3";
 	private static final int FONT_SIZE = 14;
 
 	@Override
@@ -51,7 +49,7 @@ public class Main extends Application {
 		primaryStage.setTitle("SPLFX v" + VERSION + " by AlekZ");
 		primaryStage.setResizable(false);
 		File icoFile = new File("vents_ico.png");
-		String icoLocalUrl=icoFile.toURI().toURL().toString();
+		String icoLocalUrl = icoFile.toURI().toURL().toString();
 		Image ico = new Image(icoLocalUrl);
 		primaryStage.getIcons().add(ico);
 		VBox mainBox = new VBox(10);
@@ -165,28 +163,18 @@ public class Main extends Application {
 	}
 
 	public static void logFileWriter(String projectName, String strRead, String strSort, String strWrite, long time,
-			String version) throws IOException, UnknownHostException {
+			String version) throws Exception, UnknownHostException {
 		File logFile = new File("LogFile.txt");
-		List<String> log = new ArrayList<String>();
-		try (BufferedReader br = new BufferedReader(new FileReader(logFile))) {
-			String line;
-			while ((line = br.readLine()) != null) {
-				log.add(line);
-			}
-		} catch (Exception e) {
-			throw e;
-		}
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss / dd.MM.yyyy");
+		String logLine = sdf.format(new Date());
 		try {
-			log.add(sdf.format(new Date()) + " V" + version + " " + InetAddress.getLocalHost().getHostName() + " "
-					+ projectName + " " + strRead + " " + strSort + " " + strWrite + " " + time + "ms");
+			logLine += " V" + version + " " + InetAddress.getLocalHost().getHostName() + " " + projectName + " "
+					+ strRead + " " + strSort + " " + strWrite + " " + time + "ms";
 		} catch (Exception e) {
 			throw e;
 		}
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter(logFile))) {
-			for (int i = 0; i < log.size(); i++) {
-				bw.write(log.get(i) + System.lineSeparator());
-			}
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(logFile, true))) {
+			bw.write(logLine + System.lineSeparator());
 		} catch (Exception e) {
 			throw e;
 		}

@@ -8,10 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SortPartList {
+	protected static final String LIB_FILE_PATH = "\\\\filesrv\\KB\\10 Личные папки\\Зуев А.С\\SplfxDB";
 
 	public static void removeStdParts(List<Part> partList) throws IOException, NullPointerException {
 		setSectionPart(partList);
-		List<String> stdList = addLib("StdLib");
+		List<String> stdList = addLib(LIB_FILE_PATH+"\\StdLib");
 		for (int i = 0; i < partList.size(); i++) {
 			for (int j = 0; j < stdList.size(); j++) {
 				if (partList.get(i).getSection().contains(stdList.get(j)) || partList.get(i).getSection().isEmpty()) {
@@ -25,7 +26,7 @@ public class SortPartList {
 	}
 
 	public static void removeVnsItem(List<Part> partList) throws IOException {
-		List<String> itemList = addLib("VnsItemLib");
+		List<String> itemList = addLib(LIB_FILE_PATH+"\\VnsItemLib");
 		for (int i = 0; i < partList.size(); i++) {
 			for (int j = 0; j < itemList.size(); j++) {
 				if (partList.get(i).getDesignation() != null && (partList.get(i).getDesignation().toLowerCase()
@@ -40,7 +41,7 @@ public class SortPartList {
 	}
 
 	public static void removeStupidItem(List<Part> partList) throws IOException {
-		List<String> itemList = addLib("StupidItemLib");
+		List<String> itemList = addLib(LIB_FILE_PATH+"\\StupidItemLib");
 		for (int i = 0; i < partList.size(); i++) {
 			for (int j = 0; j < itemList.size(); j++) {
 				if (partList.get(i).getName().toLowerCase().contains(itemList.get(j).toLowerCase())) {
@@ -173,7 +174,7 @@ public class SortPartList {
 	}
 
 	private static void delWrongMaterial(List<Part> partList) throws IOException {
-		List<String> itemList = addLib("WrongMaterialList");
+		List<String> itemList = addLib(LIB_FILE_PATH+"\\WrongMaterialList");
 		for (int i = 0; i < partList.size(); i++) {
 			for (int j = 0; j < itemList.size(); j++) {
 				if (partList.get(i).getMaterial().toLowerCase().contains(itemList.get(j).toLowerCase())) {

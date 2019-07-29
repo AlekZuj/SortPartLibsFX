@@ -240,7 +240,7 @@ public class ReadExcelFile {
 	protected String dateToString(Date date) {
 		SimpleDateFormat df = new SimpleDateFormat("MM-yyyy");
 		SimpleDateFormat dfMonth = new SimpleDateFormat("MM");
-		SimpleDateFormat dfDay = new SimpleDateFormat("dd");
+		SimpleDateFormat dfDay = new SimpleDateFormat("d");
 		SimpleDateFormat dfYear = new SimpleDateFormat("yyyy");
 		String str = "_";
 		if (!dfYear.format(date).equals("2019")) {
