@@ -81,12 +81,39 @@ public class ReadExcelFile {
 					// Name
 					part.setName(wb.getSheetAt(0).getRow(i).getCell(NAME_COLUMN).getStringCellValue());
 					// Material
-					part.setMaterial(wb.getSheetAt(0).getRow(i).getCell(MATERIAL_COLUMN).getStringCellValue());
+					switch (wb.getSheetAt(0).getRow(i).getCell(MATERIAL_COLUMN).getCellType()) {
+					case NUMERIC:
+						part.setMaterial("");
+						break;
+					case STRING:
+						part.setMaterial(wb.getSheetAt(0).getRow(i).getCell(MATERIAL_COLUMN).getStringCellValue());
+						break;
+					default:
+						break;
+					}
 					// Material_FB
-					part.setMaterialFB(wb.getSheetAt(0).getRow(i).getCell(MATERIALFB_COLUMN).getStringCellValue());
+					switch (wb.getSheetAt(0).getRow(i).getCell(MATERIALFB_COLUMN).getCellType()) {
+					case NUMERIC:
+						part.setMaterialFB("");
+						break;
+					case STRING:
+						part.setMaterialFB(wb.getSheetAt(0).getRow(i).getCell(MATERIALFB_COLUMN).getStringCellValue());
+						break;
+					default:
+						break;
+					}
 					// Material_Table
-					part.setMaterialTable(
-							wb.getSheetAt(0).getRow(i).getCell(MATERIALTABLE_COLUMN).getStringCellValue());
+					switch (wb.getSheetAt(0).getRow(i).getCell(MATERIALTABLE_COLUMN).getCellType()) {
+					case NUMERIC:
+						part.setMaterialTable("");
+						break;
+					case STRING:
+						part.setMaterialTable(
+								wb.getSheetAt(0).getRow(i).getCell(MATERIALTABLE_COLUMN).getStringCellValue());
+						break;
+					default:
+						break;
+					}
 					// Thickness
 					switch (wb.getSheetAt(0).getRow(i).getCell(THICKNESS_COLUMN).getCellType()) {
 					case NUMERIC:

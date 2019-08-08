@@ -102,3 +102,100 @@
 18:42:31 / 29.07.2019 V1.2 AlekZBook 111    4378ms
 18:43:20 / 29.07.2019 V1.2 AlekZBook 111    3141ms
 21:03:11 / 29.07.2019 V1.2 AlekZBook 222    3031ms
+23:30:33 / 30.07.2019 V1.3 AlekZBook 11  Sort: java.lang.NullPointerException Write: java.lang.NullPointerException 8167ms
+23:31:14 / 30.07.2019 V1.3 AlekZBook 1  Sort: java.lang.NullPointerException Write: java.lang.NullPointerException 5813ms
+23:32:43 / 30.07.2019 V1.3 AlekZBook 1  Sort: java.lang.NullPointerException Write: java.lang.NullPointerException 5759ms
+23:40:35 / 30.07.2019 V1.3 AlekZBook 1  Sort: java.lang.NullPointerException Write: java.lang.NullPointerException 5783ms
+23:46:10 / 30.07.2019 V1.3 AlekZBook 1  Sort: java.lang.NullPointerException Write: java.lang.NullPointerException 5165ms
+23:48:32 / 30.07.2019 V1.3 AlekZBook 1  Sort: java.lang.NullPointerException Write: java.lang.NullPointerException 5430ms
+23:51:38 / 30.07.2019 V1.3 AlekZBook 1  Sort: java.lang.NullPointerException  3935ms
+23:54:26 / 30.07.2019 V1.3 AlekZBook 1   Write: java.lang.NullPointerException 4934ms
+23:56:07 / 30.07.2019 V1.3 AlekZBook 1   Write: java.lang.NullPointerException 4055ms
+00:03:20 / 31.07.2019 V1.3 AlekZBook 1   Write: java.lang.NullPointerException 3422ms
+00:05:37 / 31.07.2019 V1.3 AlekZBook 1    4584ms
+00:09:34 / 31.07.2019 V1.3 AlekZBook 1   Write: java.io.FileNotFoundException: G:\Перечень деталей 1.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом) 4679ms
+00:09:44 / 31.07.2019 V1.3 AlekZBook 1    3943ms
+00:13:10 / 31.07.2019 V1.3 AlekZBook 1   Write: java.io.FileNotFoundException: G:\Перечень деталей 1.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом) 5079ms
+00:14:00 / 31.07.2019 V1.3 AlekZBook 1    44014ms
+00:19:56 / 31.07.2019 V1.3 AlekZBook 11    5583ms
+00:29:35 / 31.07.2019 V1.3 AlekZBook 1   Write: java.io.FileNotFoundException: G:\Перечень деталей 1.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом) 4174ms
+00:29:46 / 31.07.2019 V1.3 AlekZBook 1    4631ms
+00:30:54 / 31.07.2019 V1.3 AlekZBook 1    8601ms
+00:31:28 / 31.07.2019 V1.3 AlekZBook 1    5342ms
+00:31:58 / 31.07.2019 V1.3 AlekZBook 1    7879ms
+00:34:44 / 31.07.2019 V1.3 AlekZBook 1    5416ms
+00:37:41 / 31.07.2019 V1.3 AlekZBook 1    5407ms
+21:37:20 / 31.07.2019 V1.3 AlekZBook 2   Write: java.lang.NullPointerException 4833ms
+21:39:55 / 31.07.2019 V1.3 AlekZBook 2    3632ms
+21:41:17 / 31.07.2019 V1.3 AlekZBook 22    2288ms
+21:42:16 / 31.07.2019 V1.3 AlekZBook 3    1520ms
+21:45:34 / 31.07.2019 V1.3 AlekZBook 3   Write: java.io.FileNotFoundException: E:\Перечень деталей 3.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом) 5455ms
+21:45:46 / 31.07.2019 V1.3 AlekZBook 3    4167ms
+22:02:21 / 31.07.2019 V1.3 AlekZBook 1a    2686ms
+22:05:37 / 31.07.2019 V1.3 AlekZBook 2а    1440ms
+22:08:13 / 31.07.2019 V1.3 AlekZBook 3а    2207ms
+22:12:44 / 31.07.2019 V1.3 AlekZBook 3a    4033ms
+22:25:27 / 31.07.2019 V1.3 AlekZBook 3a    4711ms
+22:27:47 / 31.07.2019 V1.3 AlekZBook 3a   Write: java.io.FileNotFoundException: E:\First\Перечень деталей 3a.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом) 5024ms
+22:29:16 / 31.07.2019 V1.3 AlekZBook 3a    4831ms
+22:34:46 / 31.07.2019 V1.3 AlekZBook 3a    414845ms
+22:35:23 / 31.07.2019 V1.3 AlekZBook 3a    10007ms
+22:41:09 / 31.07.2019 V1.3 AlekZBook 1a   Write: java.lang.IndexOutOfBoundsException: Index: 140, Size: 90 16189ms
+22:41:36 / 31.07.2019 V1.3 AlekZBook 1a    5231ms
+22:45:17 / 31.07.2019 V1.3 AlekZBook 2a    1743ms
+22:55:10 / 31.07.2019 V1.3 AlekZBook 3a    4830ms
+22:58:15 / 31.07.2019 V1.3 AlekZBook 4a    1359ms
+23:01:53 / 31.07.2019 V1.3 AlekZBook 5a    2823ms
+23:01:59 / 31.07.2019 V1.3 AlekZBook 5a    2431ms
+23:05:32 / 31.07.2019 V1.3 AlekZBook 0a    1719ms
+23:09:40 / 31.07.2019 V1.3 AlekZBook 6a    1527ms
+23:13:43 / 31.07.2019 V1.3 AlekZBook 7a    1728ms
+23:15:24 / 31.07.2019 V1.3 AlekZBook 7a   Write: java.io.FileNotFoundException: E:\First\Перечень деталей 7a.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом) 4336ms
+23:15:33 / 31.07.2019 V1.3 AlekZBook 7a    4920ms
+23:16:29 / 31.07.2019 V1.3 AlekZBook 7a    4969ms
+23:19:28 / 31.07.2019 V1.3 AlekZBook 7a    27632ms
+23:19:44 / 31.07.2019 V1.3 AlekZBook 6b    1983ms
+23:19:59 / 31.07.2019 V1.3 AlekZBook 5b    3464ms
+23:20:11 / 31.07.2019 V1.3 AlekZBook 4b    3542ms
+23:20:19 / 31.07.2019 V1.3 AlekZBook 3b    2654ms
+23:20:30 / 31.07.2019 V1.3 AlekZBook 2b    3367ms
+23:20:40 / 31.07.2019 V1.3 AlekZBook 1b    3102ms
+23:20:56 / 31.07.2019 V1.3 AlekZBook 8b    9759ms
+23:21:41 / 31.07.2019 V1.3 AlekZBook 0b    1758ms
+23:26:15 / 31.07.2019 V1.3 AlekZBook 9a    1728ms
+23:29:08 / 31.07.2019 V1.3 AlekZBook 10a    2375ms
+23:32:03 / 31.07.2019 V1.3 AlekZBook 10b   Write: java.lang.NullPointerException 3211ms
+23:32:31 / 31.07.2019 V1.3 AlekZBook 10b   Write: java.lang.NullPointerException 3272ms
+23:33:12 / 31.07.2019 V1.3 AlekZBook 10b    4897ms
+23:35:32 / 31.07.2019 V1.3 AlekZBook 11a    1663ms
+23:37:28 / 31.07.2019 V1.3 AlekZBook 12a    1582ms
+23:09:01 / 03.08.2019 V1.3 AlekZBook 234    5601ms
+23:09:50 / 03.08.2019 V1.3 AlekZBook 234   Write: java.lang.NullPointerException 2902ms
+15:48:14 / 04.08.2019 V1.3 AlekZBook 234    5480ms
+15:48:17 / 04.08.2019 V1.3 AlekZBook 234   Write: java.lang.NullPointerException 1974ms
+15:49:55 / 04.08.2019 V1.3 AlekZBook 234   Write: java.lang.NullPointerException 3049ms
+15:51:01 / 04.08.2019 V1.3 AlekZBook 234    3744ms
+16:09:53 / 04.08.2019 V1.3 AlekZBook 0copy    3354ms
+16:11:41 / 04.08.2019 V1.3 AlekZBook 0copy    5142ms
+16:14:30 / 04.08.2019 V1.3 AlekZBook 0copy    4303ms
+16:17:58 / 04.08.2019 V1.3 AlekZBook 0copy    4342ms
+16:21:38 / 04.08.2019 V1.3 AlekZBook 0copy    4121ms
+16:28:30 / 04.08.2019 V1.3 AlekZBook 0copy   Write: java.io.FileNotFoundException: E:\First\Перечень деталей 0copy.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом) 4773ms
+16:28:37 / 04.08.2019 V1.3 AlekZBook 0copy    2735ms
+16:28:40 / 04.08.2019 V1.3 AlekZBook 0copy    1511ms
+16:30:38 / 04.08.2019 V1.3 AlekZBook 11111    2960ms
+16:30:41 / 04.08.2019 V1.3 AlekZBook 11111    1366ms
+16:31:42 / 04.08.2019 V1.3 AlekZBook 11111    3887ms
+16:31:46 / 04.08.2019 V1.3 AlekZBook 11111    2512ms
+16:34:16 / 04.08.2019 V1.3 AlekZBook 11111    3567ms
+16:34:21 / 04.08.2019 V1.3 AlekZBook 11111    2720ms
+16:38:20 / 04.08.2019 V1.3 AlekZBook 11111    3968ms
+20:21:36 / 05.08.2019 V1.4 AlekZBook 7   Write: java.lang.NullPointerException 2784ms
+20:22:44 / 05.08.2019 V1.4 AlekZBook 07   Write: java.lang.NullPointerException 2529ms
+20:24:27 / 05.08.2019 V1.4 AlekZBook 07   Write: java.lang.NullPointerException 4210ms
+20:25:16 / 05.08.2019 V1.4 AlekZBook 07    4450ms
+20:28:04 / 05.08.2019 V1.4 AlekZBook 07    4591ms
+20:29:20 / 05.08.2019 V1.4 AlekZBook 07    3904ms
+20:29:23 / 05.08.2019 V1.4 AlekZBook 07    1662ms
+20:29:37 / 05.08.2019 V1.4 AlekZBook 02    1279ms
+20:29:41 / 05.08.2019 V1.4 AlekZBook 02    2681ms

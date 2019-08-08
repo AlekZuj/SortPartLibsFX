@@ -6,6 +6,7 @@
 //v 1.1 - added NullPointerExsception in catch. New DoneController.
 //v 1.2 - no-break space (char 160) problem in hight/width/length debugged. WriteExselFile(ral) if designation contains SLDPRT write swFile name. Text size in constant. Add ico.
 //v 1.3 - get Lib Files through the LAN. Del 0 from dates in designation. write logFile without reading.
+//v 1.4 - Debugged NullPointerExceptions in Sort and Write classes. Added check of double positions in designations.
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -41,7 +42,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
 public class Main extends Application {
-	private static final String VERSION = "1.3";
+	private static final String VERSION = "1.4";
 	private static final int FONT_SIZE = 14;
 
 	@Override
@@ -218,6 +219,7 @@ public class Main extends Application {
 						wef.saveXLSX(filePathMakerRal(outputFilePath), list);
 						DoneController.doneWindow();
 					} catch (Exception e) {
+						e.printStackTrace();
 						ErrContoller.errWindow(strWrite = "Write: " + e.toString());
 					}
 				}
@@ -227,6 +229,7 @@ public class Main extends Application {
 					wef.saveXLSX(filePathMakerRal(outputFilePath), list);
 					DoneController.doneWindow();
 				} catch (Exception e) {
+					e.printStackTrace();
 					ErrContoller.errWindow(strWrite = "Write: " + e.toString());
 				}
 			}
@@ -245,6 +248,7 @@ public class Main extends Application {
 						wef.saveXLSX(outputFilePath, list);
 						DoneController.doneWindow();
 					} catch (Exception e) {
+						e.printStackTrace();
 						ErrContoller.errWindow(strWrite = "Write: " + e.toString());
 					}
 				}
@@ -254,6 +258,7 @@ public class Main extends Application {
 					wef.saveXLSX(outputFilePath, list);
 					DoneController.doneWindow();
 				} catch (Exception e) {
+					e.printStackTrace();
 					ErrContoller.errWindow(strWrite = "Write: " + e.toString());
 				}
 			}
