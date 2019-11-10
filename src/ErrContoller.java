@@ -59,12 +59,12 @@ public class ErrContoller {
 		HBox hbox = new HBox();
 		hbox.setSpacing(10);
 		TextField tf = new TextField();
-		tf.setAlignment(Pos.CENTER);
-		tf.setMinSize(65, 15);
-		tf.setPadding(new Insets(10, 10, 10, 10));
+		tf.setAlignment(Pos.CENTER_LEFT);
+		tf.setMinSize(200, 15);
+		tf.setPadding(new Insets(10));
 		Button btnChoose = new Button("...");
 		btnChoose.setPrefSize(Control.USE_COMPUTED_SIZE, Control.USE_COMPUTED_SIZE);
-		btnChoose.setPadding(new Insets(10, 10, 10, 10));
+		btnChoose.setPadding(new Insets(10));
 		btnChoose.setOnAction(event -> {
 			FileChooser fc = new FileChooser();
 			fc.setInitialDirectory(new File("c:\\"));

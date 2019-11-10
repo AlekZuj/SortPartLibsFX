@@ -11,4 +11,20 @@ public class DoneController {
 		doneWindow.setContentText("Готово!");
 		doneWindow.showAndWait();
 	}
+	
+	 public static void doneWindowCompare() {
+	        Alert doneWindow = new Alert(AlertType.INFORMATION);
+	        doneWindow.setTitle("Готово");
+	        doneWindow.setHeaderText(null);
+	        doneWindow.setContentText("Эти перечни идентичны.");
+	        doneWindow.showAndWait();
+	    }
+
+	    public static void doneWindowCompareMsg(String msg) {
+	        Alert doneWindow = new Alert(AlertType.INFORMATION);
+	        doneWindow.setTitle("Готово");
+	        doneWindow.setHeaderText(null);
+	        doneWindow.setContentText("Готово! " + msg + " перезаписан!");
+	        doneWindow.showAndWait();
+	    }
 }
