@@ -8,6 +8,7 @@
 //v 1.3 - get Lib Files through the LAN. Del 0 from dates in designation. write logFile without reading.
 //v 1.4 - Debugged NullPointerExceptions in Sort and Write classes. Added check of double positions in designations.
 //v 1.5 - Added compare function. refactored some code. Made better ErrControllet
+//v 1.5.1 - date-to-string change year to 2020;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -25,6 +26,8 @@ import compareClasses.CompareList;
 import compareClasses.PartShort;
 import compareClasses.XlsxMarker;
 import compareClasses.XlsxReader;
+import controllers.DoneController;
+import controllers.ErrContoller;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -52,7 +55,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
 public class Main extends Application {
-	private static final String VERSION = "1.5";
+	private static final String VERSION = "1.5.1";
 	private static final int FONT_SIZE = 14;
 
 	@Override

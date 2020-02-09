@@ -203,3 +203,16 @@
 12:19:02 / 10.11.2019 V1.4 AlekZBook 22 Read: java.lang.NullPointerException   11416ms
 12:22:40 / 10.11.2019 V1.4 AlekZBook 2 Read: java.lang.NullPointerException   8973ms
 12:29:31 / 10.11.2019 V1.4 AlekZBook ddad Read: java.lang.NullPointerException   8391ms
+11:17:57 / 09.02.2020 V1.5.1 AlekZBook 1    8250ms
+11:21:27 / 09.02.2020 V1.5.1 AlekZBook 1    22464ms
+11:36:38 / 09.02.2020 V1.5.1 AlekZBook 1    9056ms
+11:40:51 / 09.02.2020 V1.5.1 AlekZBook 1    9121ms
+11:44:38 / 09.02.2020 V1.5.1 AlekZBook 1    21020ms
+11:45:52 / 09.02.2020 V1.5.1 AlekZBook 1    23923ms
+11:48:01 / 09.02.2020 V1.5.1 AlekZBook 1    90101ms
+11:50:52 / 09.02.2020 V1.5.1 AlekZBook 1    10241ms
+11:53:19 / 09.02.2020 V1.5.1 AlekZBook 1    15584ms
+12:00:27 / 09.02.2020 V1.5.1 AlekZBook 1    33610ms
+12:01:12 / 09.02.2020 V1.5.1 AlekZBook 1    28350ms
+12:07:28 / 09.02.2020 V1.5.1 AlekZBook 1    8340ms
+12:15:46 / 09.02.2020 V1.5.1 AlekZBook 3    4675ms

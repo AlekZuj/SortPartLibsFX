@@ -270,10 +270,15 @@ public class ReadExcelFile {
 		SimpleDateFormat dfDay = new SimpleDateFormat("d");
 		SimpleDateFormat dfYear = new SimpleDateFormat("yyyy");
 		String str = "_";
-		if (!dfYear.format(date).equals("2019")) {
-			str += df.format(date);
+		Date currentDate = new Date();
+		if (dfMonth.format(date).equals("12")) {
+			str += dfMonth.format(date) + "-" + dfDay.format(date) + "-" + dfYear.format(date);
 		} else {
-			str += dfMonth.format(date) + "-" + dfDay.format(date);
+			if (!dfYear.format(date).equals(dfYear.format(currentDate))) {
+				str += df.format(date);
+			} else {
+				str += dfMonth.format(date) + "-" + dfDay.format(date);
+			}
 		}
 		return str;
 	}
